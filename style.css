@@ -1,0 +1,826 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+:root {
+    --black: #151314;
+    --apricot: #ffb585; 
+    --light: #f5f4eb;
+    --gray: #989694;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    background-color: #f5f4eb;
+    color: var(--black);
+}
+
+h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 0.4rem;
+    padding: 2rem 0;
+}
+
+h3 {
+    font-family: 'Lora', sans-serif;
+    letter-spacing: 0.1rem;
+    padding: 1rem 0;
+}
+
+p {
+    font-family: 'Lora', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+}
+
+li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.4rem;
+    list-style: none;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.container {
+    width: 100vw;
+    height: 30rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0.2rem;
+    grid-template-areas: 
+    "header"
+    "hero"
+    "values"
+    "image-joanna"
+    "about-me"
+    "footer";
+}
+    
+.header {
+    width: 100vw;
+    background-color: var(--gray); 
+    height: 15rem;
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1rem solid #151314;
+}
+
+.hero {
+    grid-area: hero;
+    background-color: var(--light);
+    color: var(--apricot);
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 1.7rem;
+    padding-left: 1.2rem;
+}
+
+.btn {
+    width: 7rem;
+    height: 4rem;
+    background-color: var(--apricot);
+    color: var(--light);
+    padding: 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    border: 6px solid var(--black);
+    margin-top: 1.2rem;
+}
+
+nav {
+    width: 100vw;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    padding-top: 0.6rem;
+    text-transform: lowercase;
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    padding-top: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+nav li {
+    padding: 0 1rem;
+    list-style: none;
+}
+
+nav a {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--black);
+    font-size: 0.9rem;
+}
+
+nav a:hover {
+    color: var(--light);
+    transition: 0.3s;
+}
+
+nav a:active {
+    color: var(--apricot);
+    text-decoration:underline;
+}
+
+.values {
+    grid-area: values;
+    background-color: var(--light);
+    font-family: 'Roboto Condensed', sans-serif;
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid var(--black);
+    height: 20rem;
+    text-align: center;
+    padding: 0 3rem;
+}
+
+.image-joanna {
+    grid-area: image-joanna;
+    background-color: var(--black);
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--black);
+}
+
+.about-me {
+    grid-area: about-me;
+    background-color: var(--light);
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.about-me p {
+    margin-top: 1rem;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: var(--gray);
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer li {
+    color: var(--black);
+    list-style: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.container-cv {
+    width: 100vw;
+    height: 90rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    gap: 1rem;
+    grid-template-areas: 
+    "header"
+    "hero"
+    "edu"
+    "exp"
+    "skills"
+    "tools"
+    "footer";
+}
+
+.edu {
+    grid-area: edu;
+    background-color: var(--light);
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 3px solid var(--black);
+    border-radius: .5rem;
+    padding: 0 2rem;
+    margin: 0 2rem;
+}
+
+.exp {
+    grid-area: exp;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 3px solid var(--black);
+    border-radius: 0.5rem;
+    padding: 0.1rem 2rem;
+    margin: 0.1rem 2rem;
+}
+
+.skills {
+    grid-area: skills;
+    background-color: var(--light);
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 3px solid var(--black);
+    border-radius: .5rem;
+    padding: 0 2rem;
+    margin: 0 2rem;
+}
+
+.tools {
+    grid-area: tools;
+    background-color: var(--light);
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 3px solid var(--black);
+    border-radius: .5rem;
+    padding: 0 2rem;
+    margin: 0 2rem;
+}
+
+.container-port {
+    width: 100vw;
+    height: 140rem;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas: 
+    "header header"
+    "hero hero"
+    "space1 image1"
+    "space1 project1"
+    "space1 image2"
+    "space1 project2"
+    "space1 image3"
+    "space1 project3"
+    "footer footer";
+}
+
+.space1 {
+    background-color: var(--apricot);
+    grid-area: space1;
+    grid-row-start: 3;
+    grid-row-end: 10;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.image1 {
+    grid-area: image1;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: block;
+    min-width: 50%;
+    max-width: 70%;
+}
+
+.project1 {
+width: 70%;
+height: 20rem;
+grid-area: project1;
+grid-row-start: 4;
+grid-row-end: 5;
+grid-column-start: 2;
+grid-column-end: 3;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+border: 6px solid var(--black);
+padding: 0 0.5rem;
+}
+
+.image2 {
+grid-area: image2;
+grid-row-start: 5;
+grid-row-end: 6;
+grid-column-start: 2;
+grid-column-end: 3;
+min-width: 50%;
+max-width: 70%;
+}
+
+.project2 {
+width: 70%;
+height: 15rem;
+grid-area: project2;
+grid-row-start: 6;
+grid-row-end: 7;
+grid-column-start: 2;
+grid-column-end: 3;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+border: 6px solid var(--black);
+padding: 0 0.5rem;
+}
+
+.image3 {
+    grid-area: image3;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    min-width: 50%;
+    max-width: 70%;
+}
+
+.project3 {
+width: 70%;
+height: 15rem;
+grid-area: project3;
+grid-row-start: 8;
+grid-row-end: 9;
+grid-column-start: 2;
+grid-column-end: 3;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+border: 6px solid var(--black);
+padding: 0 0.5rem;
+}
+
+.btn-project {
+    background-color: var(--apricot);
+    border: 6px solid var(--black);
+    padding: 0.7rem 1.8rem;
+}
+
+.container-contact {
+    width: 100vw;
+    height: 40rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+    grid-template-areas: 
+    "header"
+    "contact-me"
+    "footer";
+}
+
+.contact-form {
+    background-color: var(--apricot);
+    width: 17rem;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 1.2rem;
+    box-shadow: 0px 10px 10px 0px rgba(125, 104, 104, 0.8);
+}
+
+.side {
+    display: none;
+}
+
+input {
+    border: 0px solid;
+}
+
+#textarea {
+    border: 0px solid;
+}
+
+.btn-send {
+    background-color: var(--light);
+    width: 6rem;
+    height: 2.5rem;
+    color: var(--black);
+    padding: 0.8rem 1.3rem;
+    margin-top: 50px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5%;    
+}
+
+#yourname {
+    background-color: var(--light);
+    padding: 20px;
+    font-family: 'Lora', sans-serif;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#email {
+    background-color: var(--light);
+    padding: 20px;
+    font-family: 'Lora', sans-serif;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#textarea {
+    width: 13rem;
+    height: 150px;
+    padding: 20px;
+    background-color: var(--light);
+    font-family: 'Lora', sans-serif;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+
+.thanks {
+    background-color: var(--apricot);
+    font-family: 'Roboto Condensed', sans-serif;
+    border: 6px solid var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+@media only screen and (min-width: 480px) 
+and (max-width: 767px) {
+
+.container-contact {
+    width: 100vw;
+    height: 80rem;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    gap: 1rem;
+    grid-template-areas: 
+    "header header header"
+    "side contact-me side"
+    "footer footer footer";
+}
+
+.contact-form {
+    background-color: var(--apricot);
+    width: 55%;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    box-shadow: 0px 10px 10px 0px rgba(125, 104, 104, 0.8);
+}
+
+.side {
+        background-color: var(--light);
+        width: 20%;
+        height: 30rem;
+        border: 3px solid var(--black);
+}
+
+.contact-me {
+    background-color: var(--light);
+    width: 100vw;
+    height: 35rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    border: 0px solid;
+}
+
+#textarea {
+    border: 0px solid;
+}
+
+.btn-send {
+    background-color: var(--light);
+    width: 6rem;
+    height: 2.5rem;
+    color: var(--black);
+    padding: 0.8rem 1.3rem;
+    margin-top: 50px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5%;    
+}
+
+#yourname {
+    background-color: var(--light);
+    padding: 20px;
+    font-family: 'Lora', sans-serif;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#email {
+    background-color: var(--light);
+    padding: 20px;
+    font-family: 'Lora', sans-serif;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#textarea {
+    width: 13rem;
+    height: 150px;
+    padding: 20px;
+    background-color: var(--light);
+    font-family: 'Lora', sans-serif;
+    border-radius: 10px;
+    font-weight: bold;
+}
+}
+
+@media only screen and (min-width: 768px) 
+ {
+
+    .header {
+        width: 100vw;
+        height: 6rem;
+        grid-area: header;
+    }
+
+    /*Navigeringen för desktop* - gått igenom*/
+    nav {
+        width: 100%;
+        height: 6rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    nav ul {
+        padding-top: 1rem;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav li {
+        padding: 0 1rem;
+        list-style: none;
+    }
+
+    /* Container för framsida, liten desktop*/
+
+    /*Containern för framsidan*/
+    .container {
+        width: 100%;
+        height: 80rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr repeat(4, 1fr);
+        gap: 1rem;
+        grid-template-areas: 
+        "header header"
+        "hero hero"
+        "values values"
+        "image-joanna about-me"
+        "footer footer";
+    }
+
+    .image-joanna {
+        grid-area: image-joanna;
+        background-color: var(--light);
+        height: 40rem;
+        min-width: 40%;
+        max-width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        margin-left: 10rem;
+    }
+    
+    .about-me {
+        grid-area: about-me;
+        background-color: var(--apricot);
+        height: 40rem;
+        min-width: 30%;
+        max-width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 3rem;
+    }
+
+    /* CV för liten desktop */
+    .container-cv {
+        min-width: 80%;
+        max-width: 90%;
+        height: 80rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr repeat(4, 1fr);
+        gap: 1rem;
+        grid-template-areas: 
+        "header header"
+        "hero hero"
+        "edu exp"
+        "skills tools"
+        "footer footer";
+    }
+    
+    .edu {
+        min-width: 80%;
+        max-width: 90%;
+        height: 60rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 1rem 2rem;
+    }
+    
+    .exp {
+        min-width: 80%;
+        max-width: 90%;
+        height: 60rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 1rem 2rem;
+    }
+    
+    .skills {
+        min-width: 80%;
+        max-width: 90%;
+        height: 17rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .tools {
+        min-width: 80%;
+        max-width: 90%;
+        height: 17rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+    .container-contact {
+        width: 100vw;
+        height: 40rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        /*gap: 1rem;*/
+        grid-template-areas: 
+        "header header header"
+        "side contact-me side"
+        "footer footer footer";
+    }
+
+    .side {
+        background-color: var(--light);
+        width: 10%;
+        height: 30rem;
+        border: 3px solid var(--black);
+    }
+    
+    .contact-me {
+        background-color: var(--light);
+        width: 100vw;
+        height: 40rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contact-form {
+        background-color: var(--apricot);
+        width: 45%;
+        height: 35rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        padding-bottom: 30px;
+        margin-top: 50px;
+        margin-left: 0.1rem;
+        box-shadow: 0px 10px 10px 0px rgba(125, 104, 104, 0.8);
+    }
+    
+    input {
+        border: 0px solid;
+    }
+    
+    #textarea {
+        border: 0px solid;
+    }
+    
+    .btn-send {
+        background-color: var(--light);
+        width: 6rem;
+        height: 2.5rem;
+        color: var(--black);
+        padding: 0.8rem 1.3rem;
+        margin-top: 50px;
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 14px;
+        border-radius: 5%;    
+    }
+    
+    #yourname {
+        background-color: var(--light);
+        padding: 20px;
+        font-family: 'Lora', sans-serif;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+    
+    #email {
+        background-color: var(--light);
+        padding: 20px;
+        font-family: 'Lora', sans-serif;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+    
+    #textarea {
+        width: 13rem;
+        height: 150px;
+        padding: 20px;
+        background-color: var(--light);
+        font-family: 'Lora', sans-serif;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+
+}
